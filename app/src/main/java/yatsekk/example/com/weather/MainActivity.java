@@ -3,16 +3,23 @@ package yatsekk.example.com.weather;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    private Date date = new Date();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView dateTime = findViewById(R.id.date_and_time);
+        dateTime.setText(date.toString());
 
         Log.d(TAG, "onCreate: ");
         makeToast("onCreate");

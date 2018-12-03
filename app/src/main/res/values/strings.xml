@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Weather</string>
-    <string name="greeting">Hello World!</string>
+    <string name="city_located">Saint-Petersburg</string>
+    <string name="comfort_t">Comfort t°:</string>
+    <string name="humidity">Humidity:</string>
+    <string name="barometer">Barometer:</string>
+    <string name="wind">Wind:</string>
 </resources>

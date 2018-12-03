@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Погода</string>
-    <string name="greeting">Привет Мир!</string>
+    <string name="city_located">Санкт-Петербург</string>
+    <string name="comfort_t">Комфорт:</string>
+    <string name="humidity">Влажность:</string>
+    <string name="barometer">Давление:</string>
+    <string name="wind">Ветер:</string>
 </resources>
