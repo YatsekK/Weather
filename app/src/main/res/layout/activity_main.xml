@@ -120,7 +120,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/wind_textView"
-        app:layout_constraintTop_toBottomOf="@+id/present_t_and_weather_condition_textView"
+        app:layout_constraintTop_toBottomOf="@+id/current_t_and_weather_condition_textView"
         app:srcCompat="@drawable/weather_condition" />
 
     <TextView
@@ -135,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@+id/city_located" />
 
     <TextView
-        android:id="@+id/present_t_and_weather_condition_textView"
+        android:id="@+id/current_t_and_weather_condition_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

@@ -21,68 +21,59 @@ public class MainActivity extends AppCompatActivity {
         TextView dateTime = findViewById(R.id.date_and_time);
         dateTime.setText(date.toString());
 
-        Log.d(TAG, "onCreate: ");
-        makeToast("onCreate");
+        makeToastAndLog("onCreate");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart: ");
-        makeToast("onStart");
+        makeToastAndLog("onStart");
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        Log.d(TAG, "onRestoreInstanceState: ");
-        makeToast("onRestoreInstanceState");
+        makeToastAndLog("onRestoreInstanceState");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "onResume: ");
-        makeToast("onResume");
+        makeToastAndLog("onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "onPause: ");
-        makeToast("onPause");
+        makeToastAndLog("onPause");
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.d(TAG, "onSaveInstanceState: ");
-        makeToast("onSaveInstanceState");
+        makeToastAndLog("onSaveInstanceState");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "onStop: ");
-        makeToast("onStop");
+        makeToastAndLog("onStop");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG, "onRestart: ");
-        makeToast("onRestart");
+        makeToastAndLog("onRestart");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy: ");
-        makeToast("onDestroy");
+        makeToastAndLog("onDestroy");
     }
 
-    private void makeToast(String text) {
+    private void makeToastAndLog(String text) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "makeToastAndLog: " + text);
     }
-
 }
