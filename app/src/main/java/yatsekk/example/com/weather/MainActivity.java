@@ -74,6 +74,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void makeToastAndLog(String text) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "makeToastAndLog: " + text);
+        Log.d(TAG, text);
     }
 }
