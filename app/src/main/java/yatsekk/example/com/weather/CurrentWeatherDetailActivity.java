@@ -1,5 +1,6 @@
 package yatsekk.example.com.weather;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -12,11 +13,17 @@ public class CurrentWeatherDetailActivity extends AppCompatActivity {
 
     private static final String TAG = "CurrentWeatherDetail";
     private Date date = new Date();
+    private TextView cityLocated;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_weather_detail);
+
+        cityLocated = findViewById(R.id.city_located);
+        Intent intent = getIntent();
+        String cityLocatedName = intent.getStringExtra("city");
+        cityLocated.setText(cityLocatedName);
 
         TextView dateTime = findViewById(R.id.date_and_time);
         dateTime.setText(date.toString());
