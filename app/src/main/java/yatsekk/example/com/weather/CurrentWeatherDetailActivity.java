@@ -8,15 +8,15 @@ import android.widget.Toast;
 
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
+public class CurrentWeatherDetailActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "CurrentWeatherDetail";
     private Date date = new Date();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_current_weather_detail);
 
         TextView dateTime = findViewById(R.id.date_and_time);
         dateTime.setText(date.toString());
