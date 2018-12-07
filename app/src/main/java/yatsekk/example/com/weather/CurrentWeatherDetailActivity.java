@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,16 +15,46 @@ public class CurrentWeatherDetailActivity extends AppCompatActivity {
     private static final String TAG = "CurrentWeatherDetail";
     private Date date = new Date();
     private TextView cityLocated;
+    private TextView comfortT;
+    private TextView humidity;
+    private TextView barometer;
+    private TextView wind;
+
+
+    public static final String EXTRA_CITY = "city";
+    public static final String EXTRA_COMFORT = "comfort";
+    public static final String EXTRA_HUMIDITY = "humidity";
+    public static final String EXTRA_BAROMETER = "barometer";
+    public static final String EXTRA_WIND = "wind";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_weather_detail);
 
-        cityLocated = findViewById(R.id.city_located);
         Intent intent = getIntent();
-        String cityLocatedName = intent.getStringExtra("city");
+
+        cityLocated = findViewById(R.id.city_located);
+        String cityLocatedName = intent.getStringExtra(EXTRA_CITY);
         cityLocated.setText(cityLocatedName);
+
+        comfortT = findViewById(R.id.comfort_t_textView);
+        boolean comfortChecked = intent.getBooleanExtra(EXTRA_COMFORT, false);
+        comfortT.setVisibility(comfortChecked ? View.VISIBLE : View.INVISIBLE);
+
+        humidity = findViewById(R.id.humidity_textView);
+        // Почему я не могу создать Checkbox прямо тут? Почему он в этом случае null?
+        // CheckBox humidityCheckBox = findViewById(R.id.humidity_checkbox);
+        boolean humidityChecked = intent.getBooleanExtra(EXTRA_HUMIDITY, false);
+        humidity.setVisibility(humidityChecked ? View.VISIBLE : View.INVISIBLE);
+
+        barometer = findViewById(R.id.barometer_textView);
+        boolean barometerChecked = intent.getBooleanExtra(EXTRA_BAROMETER, false);
+        barometer.setVisibility(barometerChecked ? View.VISIBLE : View.INVISIBLE);
+
+        wind = findViewById(R.id.wind_textView);
+        boolean windChecked = intent.getBooleanExtra(EXTRA_WIND, false);
+        wind.setVisibility(windChecked ? View.VISIBLE : View.INVISIBLE);
 
         TextView dateTime = findViewById(R.id.date_and_time);
         dateTime.setText(date.toString());
