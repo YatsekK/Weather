@@ -13,7 +13,6 @@ import java.util.Date;
 public class CurrentWeatherDetailActivity extends AppCompatActivity {
 
     private static final String TAG = "CurrentWeatherDetail";
-    private Date date = new Date();
     private TextView cityLocated;
     private TextView comfortT;
     private TextView humidity;
@@ -57,7 +56,7 @@ public class CurrentWeatherDetailActivity extends AppCompatActivity {
         wind.setVisibility(windChecked ? View.VISIBLE : View.INVISIBLE);
 
         TextView dateTime = findViewById(R.id.date_and_time);
-        dateTime.setText(date.toString());
+        dateTime.setText(new Date().toString());
 
         makeToastAndLog("onCreate");
     }
