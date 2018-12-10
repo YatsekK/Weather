@@ -16,6 +16,15 @@ public class StartActivity extends AppCompatActivity {
     private CheckBox barometerCheckBox;
     private CheckBox windCheckBox;
 
+    private final View.OnClickListener showWeatherButtonClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), CurrentWeatherDetailActivity.class);
+            setBundle(intent);
+            startActivity(intent);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,15 +57,6 @@ public class StartActivity extends AppCompatActivity {
         windCheckBox = findViewById(R.id.wind_checkbox);
 
         Button showWeatherButton = findViewById(R.id.show_weather_button);
-        showWeatherButton.setOnClickListener(listener);
+        showWeatherButton.setOnClickListener(showWeatherButtonClickListener);
     }
-
-    private final View.OnClickListener listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), CurrentWeatherDetailActivity.class);
-            setBundle(intent);
-            startActivity(intent);
-        }
-    };
 }
