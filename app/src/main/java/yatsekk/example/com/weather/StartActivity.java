@@ -32,7 +32,6 @@ public class StartActivity extends AppCompatActivity {
         setViews();
     }
 
-
     private void setBundle(Intent intent) {
         String cityName = cityNameEditText.getText().toString();
 
