@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    tools:context=".CurrentWeatherDetailActivity">
+    android:background="@color/background_dark_theme_color">
 
     <TextView
         android:id="@+id/city_located"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/default_margin"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin_big"
         android:layout_marginEnd="@dimen/default_margin"
-        android:textColor="@color/text_color"
-        android:textSize="24sp"
+        android:textColor="@color/text_dark_theme_color"
+        android:textSize="@dimen/city_name_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -27,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/comfort_t"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_dark_theme_color"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/comfort_t_textView" />
 
@@ -35,10 +33,10 @@
         android:id="@+id/comfort_t_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/margin_big"
         android:text="-5°"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_dark_theme_color"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
@@ -46,9 +44,9 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/default_margin"
         android:text="@string/humidity"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_dark_theme_color"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -56,10 +54,10 @@
         android:id="@+id/humidity_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
         android:text="79%"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_dark_theme_color"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/comfort_t_textView" />
 
@@ -67,9 +65,9 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/default_margin"
         android:text="@string/barometer"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_dark_theme_color"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -77,10 +75,10 @@
         android:id="@+id/barometer_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:textColor="@color/text_dark_theme_color"
         android:text="764 mm"
-        android:textColor="@color/text_color"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/humidity_textView" />
 
@@ -88,9 +86,9 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/default_margin"
         android:text="@string/wind"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_dark_theme_color"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -98,10 +96,10 @@
         android:id="@+id/wind_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
         android:text="Western 8m/s"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_dark_theme_color"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/barometer_textView" />
 
@@ -109,9 +107,9 @@
         android:id="@+id/imageView"
         android:layout_width="@dimen/image_size"
         android:layout_height="@dimen/image_size"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="@dimen/default_margin"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="@dimen/default_margin"
         android:layout_marginBottom="16dp"
         android:adjustViewBounds="true"
         android:cropToPadding="false"
@@ -126,8 +124,8 @@
         android:id="@+id/date_and_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/text_color"
+        android:layout_marginTop="@dimen/default_margin"
+        android:textColor="@color/text_dark_theme_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/city_located" />
@@ -136,11 +134,11 @@
         android:id="@+id/current_t_and_weather_condition_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginEnd="@dimen/default_margin"
         android:text="1 ° cloudy"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_dark_theme_color"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
