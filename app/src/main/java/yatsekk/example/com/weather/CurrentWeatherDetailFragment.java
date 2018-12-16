@@ -24,9 +24,9 @@ public class CurrentWeatherDetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         setViews(intent);
-    }
+    }*/
 
-    private void setViews(Intent intent) {
+    /*private void setViews(Intent intent) {
 
         TextView dateTime = findViewById(R.id.date_and_time);
         dateTime.setText(new Date().toString());
@@ -52,5 +52,5 @@ public class CurrentWeatherDetailActivity extends AppCompatActivity {
         TextView wind = findViewById(R.id.wind_textView);
         boolean windChecked = intent.getBooleanExtra(EXTRA_WIND, false);
         wind.setVisibility(windChecked ? View.VISIBLE : View.INVISIBLE);
-    }
+    }*/
 }
