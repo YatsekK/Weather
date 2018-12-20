@@ -1,14 +1,14 @@
 package yatsekk.example.com.weather;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
+import android.view.ViewGroup;
 
-import java.util.Date;
-
-public class CurrentWeatherDetailActivity extends AppCompatActivity {
+public class CurrentWeatherDetailFragment extends Fragment {
 
     public static final String EXTRA_CITY = "city";
     public static final String EXTRA_COMFORT = "comfort";
@@ -16,13 +16,19 @@ public class CurrentWeatherDetailActivity extends AppCompatActivity {
     public static final String EXTRA_BAROMETER = "barometer";
     public static final String EXTRA_WIND = "wind";
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_current_weather_detail, container, false);
+        return view;
+    }
+
+    /*@Override
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_current_weather_detail);
+        setContentView(R.layout.fragment_current_weather_detail);
 
         Intent intent = getIntent();
-
         setViews(intent);
     }*/
 

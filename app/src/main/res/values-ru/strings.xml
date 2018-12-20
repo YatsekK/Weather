@@ -8,4 +8,5 @@
     <string name="wind">Ветер:</string>
     <string name="hint_enter_city_name">Введите название города</string>
     <string name="button_show_weather">Показать погоду</string>
+    <string name="temperature">Температура:</string>
 </resources>
