@@ -7,4 +7,5 @@
     <string name="wind">Wind:</string>
     <string name="hint_enter_city_name">Enter city name</string>
     <string name="button_show_weather">Show Weather</string>
+    <string name="temperature">Temperature:</string>
 </resources>
